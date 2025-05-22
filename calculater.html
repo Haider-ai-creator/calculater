@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corvit </title>
+    <style>
+
+        .buttons{
+            border-color: rgb(255, 127, 127);
+            width: 30%;
+            margin-left: 0%;
+        }
+
+        .buttons1{
+            border-radius: 15%;
+            margin-bottom: -30%;
+            border-color: rgb(0, 194, 130);
+            color: rgb(255, 127, 127);
+            width: 40%;
+            margin-left: 150%;
+        }
+
+        input
+        {
+            background-color: rgb(255, 128, 0);
+            font-size :48px;
+            align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <form method="post" name="af" action="">
+       
+
+        <table width="30%" border="10%" align="center" cellspacing="10" cellpadding="5" style="background-color: rgb(255, 153, 0);">
+            <tr>
+                <td colspan="20" align="center"><h1>Calculator</h1></td>
+            </tr>
+        
+            <tr>
+                <td> <b>*Put First Value</b></td>
+                <td><input type="text" size="10" maxlength="8" name="v11"  onkeypress="return chr(event);"></td>
+            </tr>
+            <tr>
+                <td> <b>*Put Second Value</b></td>
+                <td><input type="text" size="10" maxlength="8" name="v12"  onkeypress="return chr(event);"></td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="s1" onchange="myfun(this.value);">
+                        <option value="">select ...</option>
+                        <option value="1">Multiply</option>
+                        <option value="2">Add</option>
+                        <option value="3">Sub</option>
+                        <option value="4">Divide</option>
+                        <option value="5">Table Var1</option>
+               
+
+                    </select>
+                </td>
+            </tr>
+            <tr>
+               
+            </form>
+            <script>
+                function myfun(a)
+                {
+                    //alert(a);
+
+                    var1 = document.af.v11.value;
+                    var2 = document.af.v12.value;
+                   
+
+                    //alert(var2+var1);
+
+                    if(a == 1)
+                        alert( var1 + " X " + var2 + " = " + (var1*var2));
+
+                    if(a == 2)
+                {
+                    var1 = parseInt(var1);
+                    var2 = parseInt(var2);
+                    alert(var1 + " + " + var2 + " = " + (var1+var2));
+                }
+
+                
+                if(a == 3)
+                        alert(var1 + " - " + var2 + " = " + (var1-var2));
+
+                if(a == 4)
+                        alert( var1 + " / " + var2 + " = " + var1/var2);
+
+                        if(a == 5)
+                        for(k=1; k<=9; k++)
+                        alert( var1 + " X " + var2 + " = " + (var1*var2));
+
+                        
+                }
+               
+                
+
+                /*
+v11=document.af.v1;
+v22=document.af.v2;
+if(a==1)
+{
+    alert(v11+v22)
+}
+if(a==2)
+{
+    if(v11>v22)
+}
+alert(v11+v22)
+
+
+            function check()
+            {
+    alert("okkkkkkk");
+    return false;
+            }
+*/
+            </script>
+</body>
+</html>

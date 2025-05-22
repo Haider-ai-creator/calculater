@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corvit </title>
+    <style>
+
+        input
+        {
+            background-color: aqua;*/
+            font-size: 24px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form method="post" name="admission_form" action="index.html" onsubmit="return check();">
+
+        <table width="75%" border="0" align="center" cellspacing="10" cellpadding="5" style="background-color: rgb(0, 213, 255);">
+            <tr>
+                <td colspan="4" align="center"><h1>Admission Form</h1></td>
+            </tr>
+            <tr>
+                <td><div id="pid">My Name in paragraph</div></td>
+            </tr>
+            <tr>
+                <td>*Name</td>
+                <td><input type="text" size="10" maxlength="8" name="admission_user_name" onkeypress="return chr(event);" ></td>
+                <td>*Father Name</td>
+                <td><input type="text" size="10" maxlength="8" name="admission_father_name" onkeypress="return chr(event);"></td>
+            </tr>
+            <tr>
+                <td>Number</td>
+                <td><input type="text" size="10" maxlength="8" name="admission_user_number" onkeypress="return chr(plan);" ></td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <select name="admission_city">
+                        <option value="1">ali pur</option>
+                        <option value="2">Khairpur</option>
+                        <option value="3">Bahawalpur</option>
+                        <option value="4">Hasilpur</option>
+                    </select>
+
+                </td>
+                <td>Gender</td>
+                <td>
+                    <span>Male</span>
+        <input type="radio" name="admission_gender" value="Male">
+        <span>Female</span>
+            <input type="radio" name="admission_gender" value="Female">
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="admission_password"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit"  value="result"></td>
+                <td><input type="reset" value="Remove"></td>
+                <td><input type="button" value="Normal Button" onclick="check();"></td>
+            </tr>
+        </table>
+      </form>
+      <script>
+        function chr(p)
+        {
+            ascii=p.keyCode;
+            if(((ascii >= 48) && (ascii <= 57)))
+        {
+            return true;
+        }
+        else
+        {
+            alert("Wrong credentails");
+            return false;
+        }
+        }
+        function chr(e)
+        {
+            ascii = e.keyCode;
+            //alert(ascii);
+
+            if(((ascii >= 65) && (ascii <= 90)) || ((ascii >= 97) && (ascii <= 120)) && ((ascii >= 97) || (ascii <= 120)))
+            {
+                return true;
+            }
+            else
+            {
+                alert("Wrong Value");
+                return false; 
+            }
+                
+
+        }
+
+
+        function check()
+        {
+            user_name = document.admission_form.admission_user_name.value;   
+            user_name = document.admission_form. admission_user_number.value;
+            Number = document.admission_form.admission_father_name.value;
+            user_city = document.admission_form.admission_city.value;
+            user_gender = document.admission_form.admission_gender.value;
+
+            
+            
+            //pid = document.getElementById("pid").innerHTML;
+            //pid2 = document.getElementByName("admission_user_name").value;
+            //alert(pid);
+            //alert(pid2);
+
+            //document.getElementById("pid").innerHTML="text changed";
+            
+            //alert(idname);
+            /*
+            alert("Hello "+ user_name);
+            alert("Gender is: " + user_gender);
+            */
+
+            if((user_name == "") || (admission_father_name == ""))
+            {
+                alert("Enter Required Input");
+                document.admission_form.admission_father_name.focus();
+                return false;
+
+            }
+        }
+      </script>
+</body>
+</html>
